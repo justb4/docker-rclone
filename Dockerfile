@@ -2,9 +2,9 @@ FROM alpine:3.9
 
 ARG TIMEZONE="Europe/Amsterdam"
 ARG LOCALE="en_US.UTF-8"
-ARG BUILD_DATE=""
-ARG VERSION=""
-ARG RC_VERSION="current"
+ARG BUILD_DATE="auto"
+ARG VERSION="1.46-1"
+ARG RC_VERSION="1.46"
 
 LABEL build_version="justb4 version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL credits="original dev Brian J. Cardiff <bcardiff@gmail.com>"
