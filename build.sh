@@ -18,4 +18,4 @@ docker build \
   --tag ${REPO_NAME} \
   .
 
-docker push ${REPO_NAME}
+# docker push ${REPO_NAME}
