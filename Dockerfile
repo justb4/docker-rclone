@@ -1,10 +1,10 @@
-FROM alpine:3.9
+FROM alpine:3.11.3
 
 ARG TIMEZONE="Europe/Amsterdam"
 ARG LOCALE="en_US.UTF-8"
 ARG BUILD_DATE="auto"
-ARG VERSION="1.46-1"
-ARG RC_VERSION="1.46"
+ARG VERSION="1.51.0-1"
+ARG RC_VERSION="1.51.0"
 
 LABEL build_version="justb4 version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL credits="original dev Brian J. Cardiff <bcardiff@gmail.com>"
@@ -22,7 +22,7 @@ ENV RCLONE_VERSION=v${RC_VERSION} \
 	CHECK_URL=""  \
 	TZ=${TIMEZONE}
 
-# https://downloads.rclone.org/v1.46/rclone-v1.46-linux-amd64.zip
+# https://downloads.rclone.org/v1.51.0/rclone-v1.51.0-linux-amd64.zip
 RUN apk -U add ca-certificates fuse dcron wget tzdata \
 	&& cd /tmp && wget -q https://downloads.rclone.org/${RCLONE_VERSION}/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip  \
 	&& unzip /tmp/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip \
